@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 精灵 jane twinkle 闪烁">
+    <meta name="keywords" content="angular-tree-component, 精灵 jane twinkle 闪烁">
     <meta name="description" content="靡不有初，鲜克有终">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 会闪烁的精灵</title>
+    <title>angular-tree-component | 会闪烁的精灵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://static.blinkfox.com/hexoblog_20180914_js.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">angular-tree-component</h1>
                 </div>
             </div>
         </div>
@@ -406,12 +406,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Angular4/">
+                                <span class="chip bg-color">Angular4</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -420,7 +433,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-23
+                    2020-05-27
                 </div>
                 
 
@@ -436,19 +449,79 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                <h2 id="一、angular-tree-component介绍"><a href="#一、angular-tree-component介绍" class="headerlink" title="一、angular-tree-component介绍"></a>一、angular-tree-component介绍</h2><ul>
+<li>大背景：首先我是在Angular4 中使用的</li>
+<li>网址： <a href="http://500tech.github.io/angular-tree-component/" target="_blank" rel="noopener">http://500tech.github.io/angular-tree-component/</a></li>
+<li>GitHub: <a href="https://github.com/500tech/angular-tree-component" target="_blank" rel="noopener">https://github.com/500tech/angular-tree-component</a></li>
+</ul>
+<h2 id="二、步骤"><a href="#二、步骤" class="headerlink" title="二、步骤"></a>二、步骤</h2><ul>
+<li>install from npm </li>
+</ul>
+<pre><code>npm install --save angular-tree-component</code></pre><ul>
+<li>导入css<br>在<code>styles.scss</code>下面导入样式：</li>
+</ul>
+<pre><code>@import &apos;~angular-tree-component/dist/angular-tree-component.css&apos;;</code></pre><ul>
+<li>import the module<br><code>app.module.ts</code></li>
+</ul>
+<pre><code>import { TreeModule } from &apos;angular-tree-component&apos;;
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+@NgModule({
+    imports: [..., TreeModule],
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+})
+export class AppModule {
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+}</code></pre><ul>
+<li>app.component.ts</li>
+</ul>
+<pre><code>nodes = [
+{
+  id: 1,
+  name: &apos;root1&apos;,
+  children: [
+    { id: 2, name: &apos;child1&apos; },
+    { id: 3, name: &apos;child2&apos; }
+  ]
+},
+{
+  id: 4,
+  name: &apos;root2&apos;,
+  children: [
+    { id: 5, name: &apos;child2.1&apos; },
+    {
+      id: 6,
+      name: &apos;child2.2&apos;,
+      children: [
+        { id: 7, name: &apos;subsub&apos; }
+      ]
+    }
+  ]
+}];
+options = {};</code></pre><ul>
+<li>在 app.component.html里面</li>
+</ul>
+<pre><code>&lt;tree-root [nodes]=&quot;nodes&quot; [options]=&quot;options&quot;&gt;&lt;/tree-root&gt;</code></pre><p>到这里编译出来就可以看到一棵树啦</p>
+<h2 id="三、拓展"><a href="#三、拓展" class="headerlink" title="三、拓展"></a>三、拓展</h2><p>是不是感觉也不是很麻烦嫩，这棵树是真的牛掰，为作者手动点赞。</p>
+<p>在<code>option</code>里面可以配置一些参数：</p>
+<p>显示内容–<code>displayfield：&#39;name&#39;</code>（以显示名称为例）</p>
+<p><code>id--idField: &#39;uuid&#39;</code>(如果没有id，会随机生成id，保证每个节点的唯一性)</p>
+<p>是否展开节点：isExpandedField:’expanded’（默认是不展开的哟）</p>
+<p>actionMapping:自定义事件，</p>
+<pre><code>mouse: {
+    dblClick: (tree, node, $event) =&gt; {
+        if (node.hasChildren) TREE_ACTIONS.TOGGLE_EXPANDED(tree, node, $event);
+        }
+    }</code></pre><p><strong>支持按需加载</strong></p>
+<pre><code>getChildren: this.getChildren.bind(this)</code></pre><p><strong>events</strong></p>
+<pre><code>&lt;tree-root [nodes]=&quot;nodes&quot;
+(toggleExpanded)=&quot;onEvent($event)&quot;
+(activate)=&quot;onEvent($event)&quot;
+(focus)=&quot;onEvent($event)&quot;
+(blur)=&quot;onEvent($event)&quot;&gt;
+&lt;/tree-root&gt;
+ onEvent = ($event) =&gt; console.log($event);</code></pre><p><em>有activate状态就有deactivate状态</em></p>
+<p>在option里面添加：<code>useCheckBox:true</code> 可以显示checkBox。这时还可以有一个select事件，获取的是子节点。那如果需要获取父节点怎么处理呢，折腾了老半天之后，最终还是找到了方法。。。。</p>
+<p><code>node.partialSelected</code> 可以获取到根节点哟。</p>
 
             </div>
             <hr/>
@@ -474,7 +547,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jane-twinkle.github.io/2020/05/23/hello-world/">https://jane-twinkle.github.io/2020/05/23/hello-world/</a>
+                    <a href="https://jane-twinkle.github.io/2020/05/27/%E5%89%8D%E7%AB%AF/angular-tree-component/">https://jane-twinkle.github.io/2020/05/27/%E5%89%8D%E7%AB%AF/angular-tree-component/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -511,7 +584,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Angular4/">
+                                    <span class="chip bg-color">Angular4</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -677,9 +754,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/05/27/%E5%89%8D%E7%AB%AF/angular-tree-component/">
                     <div class="card-image">
@@ -699,9 +777,9 @@ GitHub: https://g
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -714,6 +792,7 @@ GitHub: https://g
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -729,7 +808,7 @@ GitHub: https://g
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/05/23/hello-world/">
@@ -759,7 +838,6 @@ GitHub: https://g
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
